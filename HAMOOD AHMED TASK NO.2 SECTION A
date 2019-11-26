@@ -1,0 +1,680 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[10, 22, 44, 23, 4]\n",
+      "[10, 22, 44, 23, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-1 copy a list\n",
+    "original_list1= [10,22,44,23,4]\n",
+    "new_list2 = list(original_list1)\n",
+    "print(original_list1)\n",
+    "print(new_list2)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "()\n",
+      "()\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-2\n",
+    "#create an empty tuple\n",
+    "x=()\n",
+    "print(x)\n",
+    "#create an empty tuple with tuple() function built-in Python\n",
+    "tuple1=tuple()\n",
+    "print(tuple1)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('tuple', False, 3.2, 1)\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-3\n",
+    "#create a tuple with different data types\n",
+    "tuple2=(\"tuple\",False,3.2,1)\n",
+    "print(tuple2)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('U', 'I', 'T', 2, 0, 2, 1, 8, 'b', 'a', 't', 'c', 'h')\n",
+      "2\n",
+      "a\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-4\n",
+    "#Get an item of the tuple\n",
+    "tuplex=(\"U\",\"I\",\"T\",2,0,2,1,8,\"b\",\"a\",\"t\",\"c\",\"h\")\n",
+    "print(tuplex)\n",
+    "#Get item (4th element) of the tuple by index\n",
+    "item=tuplex[3]\n",
+    "print(item)\n",
+    "#Get item (4th element from last) by index negative\n",
+    "item1=tuplex[-4]\n",
+    "print(item1)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 3, 4, 5, 6]\n",
+      "[2, 3, 4, 5, 6]\n",
+      "[]\n",
+      "[2, 3, 4, 5, 6]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-5\n",
+    "lst=[2,3,4]\n",
+    "lst.extend([5,6])\n",
+    "print(lst)\n",
+    "#list is extended by adding 5 and 6 in previous list\n",
+    "lst2=lst.copy()\n",
+    "print(lst2)\n",
+    "#copy method copies the list and store the values to lst2\n",
+    "lst.clear()\n",
+    "print(lst)\n",
+    "#clear method clear the data in list\n",
+    "print(lst2)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "-39 days, 0:00:00\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Programming Exercise\n",
+    "#program-1\n",
+    "from datetime import date\n",
+    "d1=date(2019,7,3)\n",
+    "d2=date(2019,5,25)\n",
+    "c=d2-d1\n",
+    "print(c)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "answer a) 17.726539554219745\n",
+      "answer b) 21.650635094610966\n",
+      "answer c) 28.97777478867205\n",
+      "answer d) 40.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-2\n",
+    "from math import sin\n",
+    "from math import pi\n",
+    "#a)18 feet and 80 degree\n",
+    "height=18 * sin(pi * (80/180))\n",
+    "print(\"answer a) \" +str(height))\n",
+    "#b)25 feet and 60 degree\n",
+    "height=25 * sin(pi * (60/180))\n",
+    "print(\"answer b) \" +str(height))\n",
+    "#c)30 feet and 75 degree\n",
+    "height=30 * sin(pi * (75/180))\n",
+    "print(\"answer c) \" +str(height))\n",
+    "#d)40 feet and 90 degree\n",
+    "height=40 * sin(pi * (90/180))\n",
+    "print(\"answer d) \" +str(height))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n",
+      "middle value is 24\n",
+      "[29, 26, 24, 22, 20]\n",
+      "[29, 26, 24, 22, 20]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-3\n",
+    "#a)index of middle element of list\n",
+    "lst=[20,22,24,26,29]\n",
+    "mid_indx=int(len(lst)/2)\n",
+    "print(mid_indx)\n",
+    "#b)middle element of list\n",
+    "print(\"middle value is \" + str(lst[2]))\n",
+    "#c)sort\n",
+    "lst.sort(reverse= True)\n",
+    "print(lst)\n",
+    "#d)remove lst element\n",
+    "lst.remove(20)\n",
+    "lst.extend([20])\n",
+    "print(lst)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Jan', 'Feb', 'Mar', 'Apr', 'May']\n"
+     ]
+    },
+    {
+     "ename": "AttributeError",
+     "evalue": "'tuple' object has no attribute 'insert'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-9-ff8988765ca4>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[0;32m      5\u001b[0m \u001b[0mmonthsL\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0minsert\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;36m3\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;34m\"Apr\"\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsL\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 7\u001b[1;33m \u001b[0mmonthsT\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0minsert\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;36m3\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;34m\"Apr\"\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      8\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsT\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mAttributeError\u001b[0m: 'tuple' object has no attribute 'insert'"
+     ]
+    }
+   ],
+   "source": [
+    "#program-4\n",
+    "#a\n",
+    "monthsL=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsT=(\"Jan\",\"Feb\",\"Mar\",\"May\")\n",
+    "monthsL.insert(3,\"Apr\")\n",
+    "print(monthsL)\n",
+    "monthsT.insert(3,\"Apr\")\n",
+    "print(monthsT)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Jan', 'Feb', 'Mar', 'May', 'Jun']\n"
+     ]
+    },
+    {
+     "ename": "AttributeError",
+     "evalue": "'tuple' object has no attribute 'append'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-11-1c2ec72a6518>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[0;32m      5\u001b[0m \u001b[0mmonthsL\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;34m\"Jun\"\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsL\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 7\u001b[1;33m \u001b[0mmonthsT\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;34m\"Jun\"\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      8\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsT\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mAttributeError\u001b[0m: 'tuple' object has no attribute 'append'"
+     ]
+    }
+   ],
+   "source": [
+    "#program-4\n",
+    "#b\n",
+    "monthsL=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsT=(\"Jan\",\"Feb\",\"Mar\",\"May\")\n",
+    "monthsL.append(\"Jun\")\n",
+    "print(monthsL)\n",
+    "monthsT.append(\"Jun\")\n",
+    "print(monthsT)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Jan', 'Feb', 'Mar']\n",
+      "['Jan', 'Feb', 'Mar']\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-4\n",
+    "#c\n",
+    "monthsL=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsT=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsL.pop()\n",
+    "print(monthsL)\n",
+    "monthsT.pop()\n",
+    "print(monthsT)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Jan', 'Mar', 'May']\n",
+      "['Jan', 'Mar', 'May']\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-4\n",
+    "#d\n",
+    "monthsL=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsT=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsL.remove('Feb')\n",
+    "print(monthsL)\n",
+    "monthsT.remove('Feb')\n",
+    "print(monthsT)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['May', 'Mar', 'Jan', 'Feb']\n"
+     ]
+    },
+    {
+     "ename": "AttributeError",
+     "evalue": "'tuple' object has no attribute 'sort'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-14-a5382ce3582a>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[0;32m      5\u001b[0m \u001b[0mmonthsL\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0msort\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mreverse\u001b[0m\u001b[1;33m=\u001b[0m\u001b[1;32mTrue\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsL\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 7\u001b[1;33m \u001b[0mmonthsT\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0msort\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mreverse\u001b[0m\u001b[1;33m=\u001b[0m\u001b[1;32mTrue\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      8\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsT\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mAttributeError\u001b[0m: 'tuple' object has no attribute 'sort'"
+     ]
+    }
+   ],
+   "source": [
+    "#program-4\n",
+    "#e\n",
+    "monthsL=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsT=(\"Jan\",\"Feb\",\"Mar\",\"May\")\n",
+    "monthsL.sort(reverse=True)\n",
+    "print(monthsL)\n",
+    "monthsT.sort(reverse=True)\n",
+    "print(monthsT)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Feb', 'Jan', 'Mar', 'May']\n"
+     ]
+    },
+    {
+     "ename": "AttributeError",
+     "evalue": "'tuple' object has no attribute 'sort'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-15-16aca252d6ff>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[0;32m      5\u001b[0m \u001b[0mmonthsL\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0msort\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsL\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 7\u001b[1;33m \u001b[0mmonthsT\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0msort\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      8\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmonthsT\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mAttributeError\u001b[0m: 'tuple' object has no attribute 'sort'"
+     ]
+    }
+   ],
+   "source": [
+    "#program-4\n",
+    "#f\n",
+    "monthsL=[\"Jan\",\"Feb\",\"Mar\",\"May\"]\n",
+    "monthsT=(\"Jan\",\"Feb\",\"Mar\",\"May\")\n",
+    "monthsL.sort()\n",
+    "print(monthsL)\n",
+    "monthsT.sort()\n",
+    "print(monthsT)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6.5\n",
+      "['paper', 'staples', 'pencils']\n",
+      "full name is John Fitzgerald Kennedy\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-6\n",
+    "#a\n",
+    "a=6\n",
+    "b=7\n",
+    "#b\n",
+    "c=(a+b)/2\n",
+    "print(c)\n",
+    "#c\n",
+    "inventory=['paper','staples','pencils']\n",
+    "print(inventory)\n",
+    "#d\n",
+    "first='John'\n",
+    "middle='Fitzgerald'\n",
+    "last='Kennedy'\n",
+    "#e\n",
+    "print(\"full name is \"+ first + \" \"+ middle + \" \" + last)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The difference between no. of words between two character is: \n",
+      "1\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-5\n",
+    "# PART-A\n",
+    "a=['a','n','a','c','h','r','o','n','i','s','t','i','c','a','l','l','y']\n",
+    "b=['c','o','u','n','t','e','r','i','n','t','u','i','t','i','v','e']\n",
+    "c=len(a)\n",
+    "d=len(b)\n",
+    "diff=int(c-d)\n",
+    "print(\"The difference between no. of words between two character is: \")\n",
+    "print(diff)\n",
+    "print(\"\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The characters in word counterrevolution is equal to sum of number of characters in words counter and revolution\n",
+      "as their difference is: \n",
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-5\n",
+    "# PART-D\n",
+    "A=['c','o','u','n','t','e','r','r','e','v','o','l','u','t','i','o','n']\n",
+    "B=['c','o','u','n','t','e','r']\n",
+    "C=['r','e','v','o','l','u','t','i','o','n']\n",
+    "D=len(A)\n",
+    "E=len(B)\n",
+    "F=len(C)\n",
+    "sum=E+F\n",
+    "DIFF=D-sum\n",
+    "print(\"The characters in word counterrevolution is equal to sum of number of characters in words counter and revolution\\nas their difference is: \")\n",
+    "print(DIFF)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Before sorting alphabetically : \n",
+      "['misrepresentation', 'misinterpretation']\n",
+      "After sorting alphabetically : \n",
+      "['misinterpretation', 'misrepresentation']\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-5\n",
+    "#part-b\n",
+    "U=['misrepresentation','misinterpretation']\n",
+    "print(\"Before sorting alphabetically : \")\n",
+    "print(U)\n",
+    "print(\"After sorting alphabetically : \")\n",
+    "U.sort()\n",
+    "print(U)\n",
+    "print(\"\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the letter e does not appear in the word floccinaucinihilipification.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-5\n",
+    "#part-c\n",
+    "print(\"the letter e does not appear in the word floccinaucinihilipification.\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-7\n",
+    "#part-a\n",
+    "x=0\n",
+    "y=0\n",
+    "if x <= 10 and y <= 10:\n",
+    "    print(\"True\")\n",
+    "else:\n",
+    "    print(\"False\")\n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-7\n",
+    "#part-b\n",
+    "x=10\n",
+    "y=10\n",
+    "if x <= 10 and y <= 10:\n",
+    "    print(\"True\")\n",
+    "else:\n",
+    "    print(\"False\")\n",
+    "    \n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-7\n",
+    "#part-c\n",
+    "x=6\n",
+    "y=6\n",
+    "if x <= 10 and y <= 10:\n",
+    "    print(\"True\")\n",
+    "else:\n",
+    "    print(\"False\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#program-7\n",
+    "#part-d\n",
+    "x=7\n",
+    "y=8\n",
+    "if x <= 10 and y <= 10:\n",
+    "    print(\"True\")\n",
+    "else:\n",
+    "    print(\"False\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
